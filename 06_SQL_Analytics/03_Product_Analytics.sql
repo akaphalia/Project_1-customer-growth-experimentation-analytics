@@ -4,12 +4,6 @@
 -- Objective:
 -- Which product categories generate the highest revenue?
 
--- =====================================================
--- Business Question 1
--- =====================================================
--- Objective:
--- Which product categories generate the highest revenue?
-
 SELECT TOP (10)
 
     pct.product_category_name_english AS product_category,
