@@ -8,7 +8,7 @@ Olist has a large customer base, but customer retention is weak. At the same tim
 
 This project investigates:
 
-> \*\*How can Olist increase customer retention while reducing delivery delays?\*\*
+> \\\*\\\*How can Olist increase customer retention while reducing delivery delays?\\\*\\\*
 
 The analysis combines Python ETL, feature engineering, exploratory data analysis, SQL analytics, Power BI, and statistical analysis to identify actionable business opportunities.
 
@@ -82,37 +82,37 @@ Power BI
    ↓
 Statistical Analysis
    ↓
-Business Insights \& Recommendations
+Business Insights \\\& Recommendations
 ```
 
 ## Project Structure
 
 ```text
-Customer Growth \& Experimentation Analytics/
+Customer Growth \\\& Experimentation Analytics/
 │
-├── 01\_Raw\_Data/
+├── 01\\\_Raw\\\_Data/
 │
-├── 02\_Data\_Audit/
+├── 02\\\_Data\\\_Audit/
 │
-├── 03\_Python\_ETL/
+├── 03\\\_Python\\\_ETL/
 │   ├── Notebooks/
 │   └── Output/
 │
-├── 04\_Feature\_Engineering/
+├── 04\\\_Feature\\\_Engineering/
 │   ├── Notebooks/
 │   └── Output/
 │
-├── 05\_EDA/
+├── 05\\\_EDA/
 │
-├── 06\_SQL\_Analytics/
+├── 06\\\_SQL\\\_Analytics/
 │
-├── 07\_PowerBI/
+├── 07\\\_PowerBI/
 │
-├── 08\_Documentation/
+├── 08\\\_Documentation/
 │
-├── 09\_Statistical\_Analysis/
+├── 09\\\_Statistical\_Analysis/
 │
-└── 10\_Images/
+└── 10\\\_Images/
 ```
 
 ## Dataset
@@ -135,12 +135,12 @@ The geolocation dataset was not included because it was not required to answer t
 ```text
 customers
 orders
-order\_items
+order\\\_items
 payments
 products
 reviews
 sellers
-product\_category\_translation
+product\\\_category\\\_translation
 ```
 
 ## 1\. Data Audit
@@ -188,23 +188,23 @@ Features were created to support operational, customer, commercial, and time-bas
 
 Key operational features include:
 
-* `approval\_time\_hours`
-* `processing\_time\_hours`
-* `transit\_time\_days`
-* `delivery\_time\_days`
-* `estimated\_delivery\_days`
-* `delivery\_delay\_days`
-* `delivered\_on\_time`
+* `approval\\\_time\\\_hours`
+* `processing\\\_time\\\_hours`
+* `transit\\\_time\\\_days`
+* `delivery\\\_time\\\_days`
+* `estimated\\\_delivery\\\_days`
+* `delivery\\\_delay\\\_days`
+* `delivered\\\_on\\\_time`
 
 Time-intelligence features include:
 
-* `purchase\_month`
-* `purchase\_year`
-* `purchase\_quarter`
-* `purchase\_day\_of\_week`
-* `purchase\_hour`
-* `is\_weekend\_order`
-* `purchase\_year\_month`
+* `purchase\\\_month`
+* `purchase\\\_year`
+* `purchase\\\_quarter`
+* `purchase\\\_day\\\_of\\\_week`
+* `purchase\\\_hour`
+* `is\\\_weekend\\\_order`
+* `purchase\\\_year\\\_month`
 
 Feature engineering was intentionally kept focused on features that support the project's business questions.
 
@@ -406,7 +406,7 @@ Although most orders are delivered on time, review scores decline substantially 
 
 Therefore, Olist can potentially improve customer satisfaction and support retention by focusing on:
 
-> \*\*Reducing extreme delivery durations, improving delivery reliability, and converting one-time customers into repeat customers.\*\*
+> \\\*\\\*Reducing extreme delivery durations, improving delivery reliability, and converting one-time customers into repeat customers.\\\*\\\*
 
 ## Disclaimer
 
