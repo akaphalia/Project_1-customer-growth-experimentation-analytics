@@ -11,20 +11,11 @@ This directory contains the documentation for all engineered features created du
 
 
 | Table | Documentation |
-
-|-------|---------------|
-
-| Orders | orders\_features.md |
-
-| Customers | customers\_features.md |
-
-| Order Items | order\_items\_features.md |
-
-| Payments | payments\_features.md |
-
-| Reviews | reviews\_features.md |
-
-| Products | products\_features.md |
-
-| Sellers | sellers\_features.md |
-
+|---|---|
+| Orders | [orders_features.md](orders_features.md) |
+| Customers | [customers_features.md](customers_features.md) |
+| Order Items | [order_items_features.md](order_items_features.md) |
+| Payments | [payments_features.md](payments_features.md) |
+| Reviews | [reviews_features.md](reviews_features.md) |
+| Products | [products_features.md](products_features.md) |
+| Sellers | [sellers_features.md](sellers_features.md) |
