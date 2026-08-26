@@ -1,20 +1,20 @@
-\# Project Decisions
+# Project Decisions
 
 
 
-This document records the key analytical and technical decisions made during the development of the \*\*Customer Growth \& Experimentation Analytics\*\* project.
+This document records the key analytical and technical decisions made during the development of the **Customer Growth & Experimentation Analytics** project.
 
 
 
-\---
+---
 
 
 
-\## 1. Business Objective
+## 1. Business Objective
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 The project is centered around the following business question:
 
@@ -24,63 +24,63 @@ The project is centered around the following business question:
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 The objective connects two important business dimensions: customer behavior and operational performance. This allows the analysis to move beyond basic sales reporting and generate actionable business recommendations.
 
 
 
-\---
+---
 
 
 
-\## 2. Analytical Scope
+## 2. Analytical Scope
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 The analysis focuses on the following core areas:
 
 
 
-\- Customer behavior and retention
+- Customer behavior and retention
 
-\- Order performance
+- Order performance
 
-\- Delivery performance
+- Delivery performance
 
-\- Product performance
+- Product performance
 
-\- Payment behavior
+- Payment behavior
 
-\- Seller performance
+- Seller performance
 
-\- Customer reviews
+- Customer reviews
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 These areas collectively provide a view of both customer experience and operational performance while remaining aligned with the project's primary business objective.
 
 
 
-\---
+---
 
 
 
-\## 3. Geolocation Data
+## 3. Geolocation Data
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 The geolocation dataset was excluded from the main analytical workflow.
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 Although geolocation provides postal-code-level information, it does not materially contribute to the defined business questions. Including it would increase data complexity without providing sufficient analytical value for this project.
 
@@ -90,35 +90,35 @@ The geolocation table is therefore documented but is not used in the main featur
 
 
 
-\---
+---
 
 
 
-\## 4. Product Category Translation
+## 4. Product Category Translation
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 English product category names are used for business-facing analysis.
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 The original product categories contain Portuguese names. The translation table allows SQL results and future Power BI visualizations to use standardized English category names that are easier for business stakeholders to interpret.
 
 
 
-\---
+---
 
 
 
-\## 5. Feature Engineering
+## 5. Feature Engineering
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 Raw transactional data was transformed into business-oriented features before conducting the main analysis.
 
@@ -128,69 +128,69 @@ Examples include:
 
 
 
-\- Approval time
+- Approval time
 
-\- Processing time
+- Processing time
 
-\- Transit time
+- Transit time
 
-\- Delivery time
+- Delivery time
 
-\- Delivery status
+- Delivery status
 
-\- Delivery-speed categories
+- Delivery-speed categories
 
-\- Customer order frequency
+- Customer order frequency
 
-\- Customer lifetime value
+- Customer lifetime value
 
-\- Average order value
+- Average order value
 
-\- Customer segments
+- Customer segments
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 Raw timestamps and transaction-level records are useful for data storage but are not always directly suitable for business analysis. Derived features convert these raw fields into interpretable metrics that can answer specific business questions.
 
 
 
-\---
+---
 
 
 
-\## 6. Customer-Level Analysis
+## 6. Customer-Level Analysis
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
-Customer analysis is performed using `customer\_unique\_id` where customer-level behavior is required.
-
-
-
-\*\*Rationale:\*\*  
-
-A single customer can have multiple `customer\_id` records associated with different orders. Using `customer\_unique\_id` provides a more accurate representation of individual customer behavior and prevents customer activity from being artificially fragmented.
+Customer analysis is performed using `customer_unique_id` where customer-level behavior is required.
 
 
 
-\---
+**Rationale:**  
+
+A single customer can have multiple `customer_id` records associated with different orders. Using `customer_unique_id` provides a more accurate representation of individual customer behavior and prevents customer activity from being artificially fragmented.
 
 
 
-\## 7. Delivery Performance
+---
 
 
 
-\*\*Decision:\*\*  
+## 7. Delivery Performance
+
+
+
+**Decision:**  
 
 Delivery performance is evaluated using the difference between the actual customer delivery date and the estimated delivery date.
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 The comparison directly measures whether an order reached the customer within the expected delivery timeframe and supports the project's objective of identifying delivery-delay problems.
 
@@ -200,9 +200,9 @@ Orders are classified into:
 
 
 
-\- On-Time
+- On-Time
 
-\- Delayed
+- Delayed
 
 
 
@@ -210,55 +210,55 @@ Additional delivery-speed categories are used where appropriate to understand th
 
 
 
-\---
+---
 
 
 
-\## 8. SQL Analytics Approach
+## 8. SQL Analytics Approach
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 SQL analysis is structured around defined business questions rather than isolated SQL syntax exercises.
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 The purpose of the SQL phase is to demonstrate the ability to transform business questions into analytical queries, interpret results, and generate meaningful insights.
 
 
 
-\---
+---
 
 
 
-\## 9. Minimum Sample Thresholds
+## 9. Minimum Sample Thresholds
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 Minimum observation thresholds are applied when comparing categories where appropriate.
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 Categories with very few observations can produce unstable averages or percentages and may lead to misleading conclusions. Applying a minimum threshold improves the reliability of category-level comparisons.
 
 
 
-\---
+---
 
 
 
-\## 10. Customer Segmentation
+## 10. Customer Segmentation
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 Customers are segmented according to their order frequency.
 
@@ -268,35 +268,35 @@ The project distinguishes between:
 
 
 
-\- One-Time Customers
+- One-Time Customers
 
-\- Repeat Customers
+- Repeat Customers
 
-\- Loyal Customers
+- Loyal Customers
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 Order frequency provides a simple and interpretable way to identify differences in customer engagement and supports the project's customer-retention objective.
 
 
 
-\---
+---
 
 
 
-\## 11. Generated Data Outputs
+## 11. Generated Data Outputs
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 Cleaned and feature-engineered datasets are retained as project outputs.
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 Keeping these outputs makes the transformation pipeline transparent and allows the progression from raw data to analytical datasets to be demonstrated within the repository.
 
@@ -306,41 +306,41 @@ Raw source data is excluded from the GitHub repository.
 
 
 
-\---
+---
 
 
 
-\## 12. GitHub Repository
+## 12. GitHub Repository
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 The GitHub repository contains the analytical workflow, notebooks, SQL scripts, documentation, and relevant processed datasets rather than the original raw dataset.
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 This keeps the repository focused on the analytical work while avoiding unnecessary duplication of the source dataset.
 
 
 
-\---
+---
 
 
 
-\## 13. Business-Focused Analysis
+## 13. Business-Focused Analysis
 
 
 
-\*\*Decision:\*\*  
+**Decision:**  
 
 Each major analytical stage should contribute to answering the project's business objective.
 
 
 
-\*\*Rationale:\*\*  
+**Rationale:**  
 
 The project is intended to demonstrate data-analyst capability rather than simply demonstrate proficiency with Python, SQL, or Power BI. Technical methods are therefore selected based on their ability to support business interpretation and decision-making.
 
