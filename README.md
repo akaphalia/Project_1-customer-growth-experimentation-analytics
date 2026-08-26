@@ -1,4 +1,4 @@
-# Customer Growth \& Experimentation Analytics
+# Customer Growth & Experimentation Analytics
 
 An end-to-end data analytics portfolio project using the Brazilian Olist e-commerce dataset to investigate customer retention, delivery performance, customer satisfaction, and commercial performance.
 
@@ -8,7 +8,7 @@ Olist has a large customer base, but customer retention is weak. At the same tim
 
 This project investigates:
 
-> \\\*\\\*How can Olist increase customer retention while reducing delivery delays?\\\*\\\*
+> **How can Olist increase customer retention while reducing delivery delays?**
 
 The analysis combines Python ETL, feature engineering, exploratory data analysis, SQL analytics, Power BI, and statistical analysis to identify actionable business opportunities.
 
@@ -27,7 +27,7 @@ The analysis combines Python ETL, feature engineering, exploratory data analysis
 * Average delivery time was approximately **12.56 days**.
 * Extremely long delivery durations represent an important customer-experience risk.
 
-### Delivery Time \& Customer Satisfaction
+### Delivery Time & Customer Satisfaction
 
 |Analysis|Result|
 |-|-:|
@@ -82,37 +82,37 @@ Power BI
    ↓
 Statistical Analysis
    ↓
-Business Insights \\\& Recommendations
+Business Insights & Recommendations
 ```
 
 ## Project Structure
 
 ```text
-Customer Growth \\\& Experimentation Analytics/
+Customer Growth & Experimentation Analytics/
 │
-├── 01\\\_Raw\\\_Data/
+├── 01_Raw_Data/
 │
-├── 02\\\_Data\\\_Audit/
+├── 02_Data_Audit/
 │
-├── 03\\\_Python\\\_ETL/
+├── 03_Python_ETL/
 │   ├── Notebooks/
 │   └── Output/
 │
-├── 04\\\_Feature\\\_Engineering/
+├── 04_Feature_Engineering/
 │   ├── Notebooks/
 │   └── Output/
 │
-├── 05\\\_EDA/
+├── 05_EDA/
 │
-├── 06\\\_SQL\\\_Analytics/
+├── 06_SQL_Analytics/
 │
-├── 07\\\_PowerBI/
+├── 07_PowerBI/
 │
-├── 08\\\_Documentation/
+├── 08_Documentation/
 │
-├── 09\\\_Statistical\_Analysis/
+├── 09_Statistical_Analysis/
 │
-└── 10\\\_Images/
+└── 10_Images/
 ```
 
 ## Dataset
@@ -135,15 +135,15 @@ The geolocation dataset was not included because it was not required to answer t
 ```text
 customers
 orders
-order\\\_items
+order_items
 payments
 products
 reviews
 sellers
-product\\\_category\\\_translation
+product_category_translation
 ```
 
-## 1\. Data Audit
+## 1. Data Audit
 
 The data-audit stage examined:
 
@@ -158,7 +158,7 @@ The data-audit stage examined:
 
 The objective was to understand the raw data and identify issues before transformation.
 
-## 2\. Python ETL
+## 2. Python ETL
 
 Python was used to clean and transform the raw Olist datasets.
 
@@ -180,7 +180,7 @@ Main activities included:
 * Matplotlib
 * Jupyter Notebook
 
-## 3\. Feature Engineering
+## 3. Feature Engineering
 
 Features were created to support operational, customer, commercial, and time-based analysis.
 
@@ -188,27 +188,27 @@ Features were created to support operational, customer, commercial, and time-bas
 
 Key operational features include:
 
-* `approval\\\_time\\\_hours`
-* `processing\\\_time\\\_hours`
-* `transit\\\_time\\\_days`
-* `delivery\\\_time\\\_days`
-* `estimated\\\_delivery\\\_days`
-* `delivery\\\_delay\\\_days`
-* `delivered\\\_on\\\_time`
+* `approval_time_hours`
+* `processing_time_hours`
+* `transit_time_days`
+* `delivery_time_days`
+* `estimated_delivery_days`
+* `delivery_delay_days`
+* `delivered_on_time`
 
 Time-intelligence features include:
 
-* `purchase\\\_month`
-* `purchase\\\_year`
-* `purchase\\\_quarter`
-* `purchase\\\_day\\\_of\\\_week`
-* `purchase\\\_hour`
-* `is\\\_weekend\\\_order`
-* `purchase\\\_year\\\_month`
+* `purchase_month`
+* `purchase_year`
+* `purchase_quarter`
+* `purchase_day_of_week`
+* `purchase_hour`
+* `is_weekend_order`
+* `purchase_year_month`
 
 Feature engineering was intentionally kept focused on features that support the project's business questions.
 
-## 4\. Exploratory Data Analysis
+## 4. Exploratory Data Analysis
 
 EDA was performed to identify patterns and generate hypotheses for deeper analysis.
 
@@ -221,7 +221,7 @@ Areas examined included:
 * One-time vs repeat customers
 * Customer retention patterns
 
-### Order \& Delivery Analytics
+### Order & Delivery Analytics
 
 * Order status
 * Delivery performance
@@ -245,7 +245,7 @@ Areas examined included:
 * Delivery-related patterns
 * Customer experience indicators
 
-## 5\. SQL Analytics
+## 5. SQL Analytics
 
 SQL Server was used to answer business questions from the transformed datasets.
 
@@ -292,13 +292,13 @@ SQL techniques include:
 * Date-based analysis
 * Multi-table joins
 
-## 6\. Power BI
+## 6. Power BI
 
 Power BI was used to convert analytical findings into an interactive business dashboard.
 
 The report includes pages covering areas such as:
 
-* Delivery \& Customer Experience
+* Delivery & Customer Experience
 * Commercial Performance
 * Payment Performance
 * Summary / Results
@@ -313,7 +313,7 @@ The dashboard includes:
 * Navigation buttons
 * Home / previous-page navigation
 
-## 7\. Statistical Analysis
+## 7. Statistical Analysis
 
 Statistical analysis was performed in Python to validate important patterns identified during EDA and Power BI.
 
@@ -406,7 +406,7 @@ Although most orders are delivered on time, review scores decline substantially 
 
 Therefore, Olist can potentially improve customer satisfaction and support retention by focusing on:
 
-> \\\*\\\*Reducing extreme delivery durations, improving delivery reliability, and converting one-time customers into repeat customers.\\\*\\\*
+> **Reducing extreme delivery durations, improving delivery reliability, and converting one-time customers into repeat customers.**
 
 ## Disclaimer
 
